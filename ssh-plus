@@ -1,22 +1,18 @@
 #!/bin/bash
 clear
-#--------------------------
-# SCRIPR SSH-PLUS
-# CANAL TELEGRAM: @TMYSSHBRASIL
-#--------------------------
 
-# - Cores
+# - COLORES
 RED='\033[1;31m'
 YELLOW='\033[1;33m'
 SCOLOR='\033[0m'
 
 # - Verifica Execucao Como Root
 [[ "$EUID" -ne 0 ]] && {
-    echo -e "{RED}[x] VC PRECISA EXECULTAR COMO USUARIO ROOT !{SCOLOR}"
+    echo -e "{RED}[x] NECESITAS EJECUTAR COMO USUARIO ROOT !{SCOLOR}"
     exit 1
 }
 
-# - Verifica Arquitetura Compativel
+# - Verifica arquitectura compatible
 case "$(uname -m)" in
     'amd64' | 'x86_64')
         arch='64'
@@ -60,4 +56,4 @@ sysctl -p -f /etc/sysctl.d/70-disable-ipv6.conf
 
 # - Execulta instalador
 [[ -e Plus ]] && rm Plus
-wget raw.githubusercontent.com/root719/TMY-SSH-PRO-V2/main/script/${arch}/Plus && chmod 777 Plus && ./Plus
+wget raw.githubusercontent.com/SparkerMoved/SSH-PLUS/main/script/${arch}/Plus && chmod 777 Plus && ./Plus
