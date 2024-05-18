@@ -1,6 +1,6 @@
 #!/bin/bash
 #====================================================
-#	@TMYSSHBRASIL 
+#	
 #====================================================
 IP=$(cat /etc/IP)
 cor1='\033[41;1;37m'
@@ -251,72 +251,72 @@ fun_edithost() {
     fi
 }
 [[ ! -e /usr/lib/sshplus ]] && exit 0
-tput setaf 7;tput setab 4;tput bold;printf '%30s%s%-15s\n' "CRIAR USUÁRIO SSH";tput sgr0
+tput setaf 7;tput setab 4;tput bold;printf '%30s%s%-15s\n' "CREAR USUARIO SSH";tput sgr0
 #echo -ne "\033[1;32m📝 NOME:\033[1;37m ";read namee
 #[[ -z $namee ]] && {
 #	echo -e "\n${cor1}Nome vazio ou invalido!${scor}\n"
 #	exit 1
 #}
-echo -ne "\033[1;32m🗣️ USUÁRIO:\033[1;37m ";read username
+echo -ne "\033[1;32m🗣️ USUARIO:\033[1;37m ";read username
 [[ -z $username ]] && {
-	echo -e "\n${cor1}usuário vazio ou invalido!${scor}\n"
+	echo -e "\n${cor1}usuario vacío o no válido!${scor}\n"
 	exit 1
 }
 [[ "$(grep -wc $username /etc/passwd)" != '0' ]] && {
-	echo -e "\n${cor1}Este usuário já existe. tente outro nome!${scor}\n"
+	echo -e "\n${cor1}Este usuario ya existe, intente con otro nombre!${scor}\n"
 	exit 1
 }
 sizemin=$(echo ${#username})
 [[ $sizemin -lt 2 ]] && {
-	echo -e "\n${cor1}Você digitou um nome de usuário muito curto${scor}"
-	echo -e "${cor1}use no mínimo dois caracteres!${scor}\n"
+	echo -e "\n${cor1}Ingresaste un nombre de usuario que es demasiado corto${scor}"
+	echo -e "${cor1}utilizar al menos 2 caracteres!${scor}\n"
 	exit 1
 }
 sizemax=$(echo ${#username})
 [[ $sizemax -gt 25 ]] && {
-	echo -e "\n${cor1}Você digitou um nome de usuário muito grande"
-	echo -e "${cor1}use no máximo 25 caracteres!${scor}\n"
+	echo -e "\n${cor1}Ingresaste un nombre de usuario demasiado largo"
+	echo -e "${cor1}utilizar un máximo de 25 caracteres!${scor}\n"
 	exit 1
 }
-echo -ne "\033[1;32m🔑 SENHA:\033[1;37m ";read password
+echo -ne "\033[1;32m🔑 CONTRASEÑA:\033[1;37m ";read password
 [[ -z $password ]] && {
-	echo -e "\n${cor1}Senha vazia ou invalida!${scor}\n"
+	echo -e "\n${cor1}Contraseña vacía o no válida!${scor}\n"
 	exit 1
 }
 sizepass=$(echo ${#password})
 [[ $sizepass -lt 4 ]] && {
-	echo -e "\n${cor1}Senha curta!, use no mínimo 4 caracteres${scor}\n"
+	echo -e "\n${cor1}¡Contraseña corta!, utiliza al menos 4 caracteres${scor}\n"
 	exit 1
 }
-echo -ne "\033[1;32m⌛ DIAS PARA EXPIRA:\033[1;37m ";read dias
+echo -ne "\033[1;32m⌛ DÍAS PARA VENCER:\033[1;37m ";read dias
 [[ -z $dias ]] && {
-	echo -e "\n${cor1}Numero de dias vazio!${scor}\n"
+	echo -e "\n${cor1}Número de días vacíos!${scor}\n"
 	exit 1
 }
 [[ ${dias} != ?(+|-)+([0-9]) ]] && {
-	echo -e "\n${cor1}Você digitou um número de dias inválido!${scor}\n"
+	echo -e "\n${cor1}Ingresaste un número de días no válido!${scor}\n"
 	exit 1
 }
 [[ $dias -lt 1 ]] && {
-	echo -e "\n${cor1}O número deve ser maior que zero!${scor}\n"
+	echo -e "\n${cor1}El número debe ser mayor que cero.!${scor}\n"
 	exit 1
 }
-echo -ne "\033[1;32m📲 LIMITE DE CONEXÕES:\033[1;37m ";read sshlimiter
+echo -ne "\033[1;32m📲 LIMITE DE CONEXIONES:\033[1;37m ";read sshlimiter
 [[ -z $sshlimiter ]] && {
-	echo -e "\n${cor1}Você deixou o limite de conexões vazio!${scor}\n"
+	echo -e "\n${cor1}Dejaste el límite de conexión vacío!${scor}\n"
 	exit 1
 }
 [[ ${sshlimiter} != ?(+|-)+([0-9]) ]] && {
-	echo -e "\n${cor1}Você digitou um número de conexões inválido!${scor}\n"
+	echo -e "\n${cor1}Ingresaste un número no válido de conexiones!${scor}\n"
 	exit 1
 }
 [[ $sshlimiter -lt 1 ]] && {
-	echo -e "\n${cor1}Número de conexões simultâneas deve ser maior que zero!${scor}\n"
+	echo -e "\n${cor1}El número de conexiones simultáneas debe ser mayor que cero.!${scor}\n"
 	exit 1
 }
 echo -ne "\033[1;32m💲 VALOR:\033[1;37m ";read vl
 [[ -z $vl ]] && {
-	echo -e "\n${cor1}Valor vazio ou invalido!${scor}\n"
+	echo -e "\n${cor1}Valor vacío o no válido!${scor}\n"
 	exit 1
 }
 final=$(date "+%Y-%m-%d" -d "+$dias days")
@@ -347,11 +347,11 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 		}
 		clear
 		#echo -e "\033[1;32m 📝NOME: \033[1;37m$nomee"
-		echo -e "\E[44;1;37m======🦸DADOS DE ACESSO🦸‍♀️======\E[0m"
+		echo -e "\E[44;1;37m======🦸DATOS DE ACCESO🦸‍♀️======\E[0m"
 		echo -e "\033[1;32m 🗣️USUARIO: \033[1;37m$username"
-		echo -e "\033[1;32m 🔑SENHA: \033[1;37m$password"
-		echo -e "\033[1;32m ⌛EXPIRA EM: \033[1;37m$gui"
-		echo -e "\033[1;32m 📲LIMITE DE CONEXÃO: \033[1;37m$sshlimiter"
+		echo -e "\033[1;32m 🔑CONTRASEÑA: \033[1;37m$password"
+		echo -e "\033[1;32m ⌛EXPIRA EN: \033[1;37m$gui"
+		echo -e "\033[1;32m 📲LIMITE DE CONEXIONES: \033[1;37m$sshlimiter"
                 echo -e "\033[1;32m 💲VALOR: \033[1;37m$vl"
 		sleep 1
 		function aguarde() {
@@ -388,22 +388,22 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 	} || {
 		clear
 		#echo -e "\033[1;32m 📝NOME: \033[1;37m$nomee"
-		echo -e "\E[44;1;37m======🦸DADOS DE ACESSO🦸‍♀️======\E[0m"
+		echo -e "\E[44;1;37m======🦸DATOS DE ACCESO🦸‍♀️======\E[0m"
 		echo -e "\033[1;32m 🗣️USUARIO: \033[1;37m$username"
-		echo -e "\033[1;32m 🔑SENHA: \033[1;37m$password"
-		echo -e "\033[1;32m ⌛EXPIRA EM: \033[1;37m$gui"
-		echo -e "\033[1;32m 📲LIMITE DE CONEXÃO: \033[1;37m$sshlimiter"
+		echo -e "\033[1;32m 🔑CONTRASEÑA: \033[1;37m$password"
+		echo -e "\033[1;32m ⌛EXPIRA EN: \033[1;37m$gui"
+		echo -e "\033[1;32m 📲LIMITE DE CONEXIONES: \033[1;37m$sshlimiter"
                 echo -e "\033[1;32m 💲VALOR: \033[1;37m$vl"
-echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLTAR AO \033[1;33mMENU!\033[0m"; read
+echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLVER AL \033[1;33mMENU!\033[0m"; read
 	}
 } || {
 	clear
 		#echo -e "\033[1;32m 📝NOME: \033[1;37m$nomee"
-		echo -e "\E[44;1;37m======🦸DADOS DE ACESSO🦸‍♀️======\E[0m"
+		echo -e "\E[44;1;37m======🦸DATOS DE ACCESO🦸‍♀️======\E[0m"
 		echo -e "\033[1;32m 🗣️USUARIO: \033[1;37m$username"
-		echo -e "\033[1;32m 🔑SENHA: \033[1;37m$password"
-		echo -e "\033[1;32m ⌛EXPIRA EM: \033[1;37m$gui"
-		echo -e "\033[1;32m 📲LIMITE DE CONEXÃO: \033[1;37m$sshlimiter"
+		echo -e "\033[1;32m 🔑CONTRASEÑA: \033[1;37m$password"
+		echo -e "\033[1;32m ⌛EXPIRA EN: \033[1;37m$gui"
+		echo -e "\033[1;32m 📲LIMITE DE CONEXION: \033[1;37m$sshlimiter"
                 echo -e "\033[1;32m 💲VALOR: \033[1;37m$vl"
-echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLTAR AO \033[1;33mMENU!\033[0m"; read
+echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLVER AL \033[1;33mMENU!\033[0m"; read
 }
