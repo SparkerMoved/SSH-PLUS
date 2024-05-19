@@ -463,35 +463,35 @@ SCOLOR='\033[0m'
 		fi
 	}
         fun_v2rayins() {
-			clear
-	        v2rayinst(){
-	            source <(curl -sL https://raw.githubusercontent.com/MEGALODON-SSH/SSHPLUS/main/Modulos/v2ray)
-                    sleep 6
-	        }
-	        if netstat -tunlp |grep v2ray 1> /dev/null 2> /dev/null; then
-	            echo -e "\E[44;1;37m            INSTALADOR V2RAY             \E[0m"
-	            echo -e "\n${YELLOW}V2RAY JÁ ESTÁ INSTALADO\nDESEJA REINSTALAR? ${SCOLOR}\n"
-	            echo -ne "${GREEN}DESEJA CONTINUAR A REINSTALAÇÃO ? ${YELLOW}[s/n]:${SCOLOR} "
-	            read resp
-	            [[ "$resp" != @(s|sim|S|SIM) ]] && {
-	                echo -e "\n${RED}Retornando...${SCOLOR}"
-	                sleep 2
-	                conexao
-	            }
-	            v2rayinst
-	        else
-	            echo -e "\E[44;1;37m            INSTALADOR V2RAY             \E[0m"
-	            echo -e "\n${YELLOW}ESTEJA CIENTE QUE ESSE METODO É INSTAVEL\nFIQUE CIENTE DOS RISCOS ! ${SCOLOR}\n"
-	            echo -ne "${GREEN}DESEJA CONTINUAR A INSTALACAO ? ${YELLOW}[s/n]:${SCOLOR} "
-	            read resp
-	            [[ "$resp" != @(s|sim|S|SIM) ]] && {
-	                echo -e "\n${RED}Retornando...${SCOLOR}"
-	                sleep 2
-	                conexao
-	            }
-	            v2rayinst
-            fi
-        }
+		clear
+		v2rayinst() {
+			source <(curl -sL https://raw.githubusercontent.com/SparkerMoved/SSH-PLUS/main/Modulos/v2ray)
+			sleep 6
+		}
+		if netstat -tunlp | grep v2ray 1>/dev/null 2>/dev/null; then
+			echo -e "\E[44;1;37m            INSTALADOR V2RAY             \E[0m"
+			echo -e "\n${YELLOW}V2RAY YA ESTA INSTALADO\nDESEA REINSTALAR? ${SCOLOR}\n"
+			echo -ne "${GREEN}DESEA CONTINUAR LA REINSTALACION ? ${YELLOW}[s/n]:${SCOLOR} "
+			read resp
+			[[ "$resp" != @(s|sim|S|SIM) ]] && {
+				echo -e "\n${RED}Regresando...${SCOLOR}"
+				sleep 2
+				conexao
+			}
+			v2rayinst
+		else
+			echo -e "\E[44;1;37m            INSTALADOR V2RAY             \E[0m"
+			echo -e "\n${YELLOW}VAS A INSTALAR EL  METODO  V2RAY ! ${SCOLOR}\n"
+			echo -ne "${GREEN}DESEA CONTINUAR LA INSTALACION ? ${YELLOW}[s/n]:${SCOLOR} "
+			read resp
+			[[ "$resp" != @(s|sim|S|SIM) ]] && {
+				echo -e "\n${RED}Regresando...${SCOLOR}"
+				sleep 2
+				conexao
+			}
+			v2rayinst
+		fi
+	}  
     	fun_chisel() {
 		clear
 		echo -e "\E[44;1;37m            GERENCIAR CHISEL             \E[0m"
