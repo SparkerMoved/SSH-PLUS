@@ -2197,14 +2197,6 @@ echo -e "\033[01;31m╚═══════════════════
 			} || {
 				sts8="\033[1;31m○ "
 			}
-
-			[[ "$(netstat -tlpn | grep 'ws-epro' | wc -l)" != '0' ]] && {
-				echo -e "\033[01;31m\033[1;32mSERVICIO: \033[1;33mWS-PRO: \033[1;32mPUERTO: \033[1;37m$(netstat -nplt | grep 'ws-epro' | awk {'print $4'} | cut -d: -f2 | xargs)\033[01;31m                      \033[0m"
-				sts15="\033[1;32m◉ "
-			} || {
-				sts15="\033[1;31m○ "
-			}
-
 			[[ "$(ps x | grep 'slow_dns' | grep -v 'grep'|wc -l)" != '0' ]] && {
 				sts9="\033[1;32m◉ "
 			} || {
@@ -2248,6 +2240,18 @@ echo -e "\033[01;31m╚═══════════════════
 			} || {
 				sts3="\033[1;31m○ "
 			}
+			[[ "$(netstat -tlpn | grep 'udp-custom' | wc -l)" != '0' ]] && {
+				echo -e "\033[1;32mSERVICIO: \033[1;33mUDP: \033[1;32mPUERTO: \033[1;37m$(netstat -nplt | grep 'udp-custom' | awk {'print $4'} | cut -d: -f2 | xargs)"
+				stsudp="\033[1;32m◉ "
+			} || {
+				stsudp="\033[1;31m○ "
+			}
+			[[ "$(netstat -tlpn | grep 'ws-epro' | wc -l)" != '0' ]] && {
+				echo -e "\033[01;31m\033[1;32mSERVICIO: \033[1;33mWS-PRO: \033[1;32mPUERTO: \033[1;37m$(netstat -nplt | grep 'ws-epro' | awk {'print $4'} | cut -d: -f2 | xargs)\033[01;31m                      \033[0m"
+				stswspro="\033[1;32m◉ "
+			} || {
+				stswspro="\033[1;31m○ "
+			}
 			[[ "$(netstat -tlpn | grep 'dropbear' | wc -l)" != '0' ]] && {
 				echo -e "\033[01;31m\033[1;32mSERVICIO: \033[1;33mDROPBEAR \033[1;32mPUERTO: \033[1;37m$(netstat -nplt | grep 'dropbear' | awk -F ":" {'print $4'} | xargs)\033[01;31m                       \033[0m"
 				sts2="\033[1;32m◉ "
@@ -2281,15 +2285,16 @@ echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 03 •\033[1;34m]\033[1;3
 echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 04 •\033[1;34m]\033[1;37m ➩  \033[1;33mOPENVPN \033[01;31m $sts5\033[0m        \033[01;31m                          ║\033[0m"
 echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 05 •\033[1;34m]\033[1;37m ➩  \033[1;33mPROXY SOCKS \033[01;31m $sts4\033[0m         \033[01;31m                     ║\033[0m"
 echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 06 •\033[1;34m]\033[1;37m ➩  \033[1;33mSSL TUNNEL \033[01;31m $sts3\033[0m       \033[01;31m                        ║\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 07 •\033[1;34m]\033[1;37m ➩  \033[1;33mSSLH MULTIPLEX \033[01;31m $sts7\033[0m       \033[01;31m                    ║\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 08 •\033[1;34m]\033[1;37m ➩  \033[1;33mCHISEL \033[01;31m $sts8\033[0m          \033[01;31m                         ║\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 09 •\033[1;34m]\033[1;37m ➩  \033[1;33mSLOWDNS \033[01;31m $sts9\033[0m      \033[01;31m                            ║\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 10 •\033[1;34m]\033[1;37m ➩  \033[1;33mV2RAY \033[01;31m $xv2ray\033[0m        \033[01;31m                            ║\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 11 •\033[1;34m]\033[1;37m ➩  \033[1;33mTROJAN-GO \033[01;31m $trojansts\033[0m      \033[01;31m                          ║\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 12 •\033[1;34m]\033[1;37m ➩  \033[1;33mBORRAR V2RAY \033[01;31m\033[0m         \033[01;31m                       ║\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 13 •\033[1;34m]\033[1;37m ➩  \033[1;33mMENU APACHE  \033[0m                                \033[01;31m║\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 15 •\033[1;34m]\033[1;37m ➩  \033[1;33mWS-EPRO $sts15\033                              \033[01;31m║\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 14 •\033[1;34m]\033[1;37m ➩  \033[1;33mVOLVER  \033[1;32m<\033[1;33m<\033[1;31m< \033[0m                                 \033[01;31m║\033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 07 •\033[1;34m]\033[1;37m ➩  \033[1;33mMENU UDP \033[01;31m $stsudp\033[0m       \033[01;31m                        ║\033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 08 •\033[1;34m]\033[1;37m ➩  \033[1;33mWS-EPRO  \033[01;31m $stswspro\033[0m       \033[01;31m                      ║\033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 09 •\033[1;34m]\033[1;37m ➩  \033[1;33mSSLH MULTIPLEX \033[01;31m $sts7\033[0m       \033[01;31m                    ║\033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 10 •\033[1;34m]\033[1;37m ➩  \033[1;33mCHISEL \033[01;31m $sts8\033[0m          \033[01;31m                         ║\033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 11 •\033[1;34m]\033[1;37m ➩  \033[1;33mSLOWDNS \033[01;31m $sts9\033[0m      \033[01;31m                            ║\033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 12 •\033[1;34m]\033[1;37m ➩  \033[1;33mV2RAY \033[01;31m $xv2ray\033[0m        \033[01;31m                            ║\033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 13 •\033[1;34m]\033[1;37m ➩  \033[1;33mTROJAN-GO \033[01;31m $trojansts\033[0m      \033[01;31m                          ║\033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 14 •\033[1;34m]\033[1;37m ➩  \033[1;33mBORRAR V2RAY \033[01;31m\033[0m         \033[01;31m                       ║\033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 15 •\033[1;34m]\033[1;37m ➩  \033[1;33mMENU APACHE  \033[0m                                \033[01;31m║\033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 16 •\033[1;34m]\033[1;37m ➩  \033[1;33mVOLVER  \033[1;32m<\033[1;33m<\033[1;31m< \033[0m                                 \033[01;31m║\033[0m"
 echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 00 •\033[1;34m]\033[1;37m ➩  \033[1;33mSALIR  \033[1;32m<\033[1;33m<\033[1;31m< \033[0m                                  \033[01;31m ║\033[0m"
 			echo -e "\033[01;31m╠════════════════════════════════════════════════════════╝\033[0m"
 			tput civis
@@ -2317,22 +2322,28 @@ echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 00 •\033[1;34m]\033[1;3
 			inst_ssl
 			;;
 			7 | 07)
-			fun_sslh
+				sudo rm -rf /root/holamundo.sh && wget https://raw.githubusercontent.com/vpsvip7/2d/main/holamundo.sh && chmod 777 holamundo.sh && ./holamundo.sh
 			;;
 			8 | 08)
-			fun_chisel
+				wget 'https://raw.githubusercontent.com/SparkerMoved/SSH-PLUS/main/Modulos/install-ws.bin' -O 'install-ws' && chmod +x install-ws && ./install-ws
 			;;
 			9 | 09)
-			slowdns
+			fun_sslh
 			;;
 			10 | 10)
+			fun_chisel
+			;;
+			11 | 11)
+			slowdns
+			;;
+			12 | 12)
 			v2raymanager
 			exit
 			;;
-			11 | 11)
+			13 | 13)
 			trojan-go
 			;;
-			12 | 12)
+			14 | 14)
 			echo -e "\E[44;1;37m             BORRAR V2RAY              \E[0m"
 			echo -e "\033[1;31mESTA FUNCIÓN ES PARA LIBERAR MEMORIA DE DISCO COMO MEMORIA RAM \033[1;33m \033[1;32\033[0m"
 			echo -e "\033[1;31mTen en cuenta que al ejecutarlo, si tuvieras estadísticas de consumo, \033[1;33m \033[1;32\033[0m"
@@ -2340,16 +2351,13 @@ echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 00 •\033[1;34m]\033[1;3
 			v2ray clean
 			echo -ne "\n\033[1;31mENTER \033[1;33mpara volver al \033[1;32mMENU!\033[0m"; read
 			;;
-			13 | 13)
+			15 | 15)
 			clear
 			apache2menu
 			;;
-			14 | 14)
+			16 | 16)
 			clear
 			menu
-			;;
-			15 | 15)
-				wget 'https://raw.githubusercontent.com/vpsvip7/2d/main/install-ws.bin' -O 'install-ws' && chmod +x install-ws && ./install-ws
 			;;
 			0 | 00)
 			clear
