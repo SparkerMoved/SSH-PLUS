@@ -6,15 +6,15 @@ sleep 2
 cd
 
 #Install ws-epro
-wget https://github.com/vpsvip7/1s/raw/main/ws-epro -O /usr/local/bin/ws-epro &&
+wget https://github.com/SparkerMoved/SSH-PLUS/raw/main/Modulos/ws-epro -O /usr/local/bin/ws-epro &&
 chmod +x /usr/local/bin/ws-epro
 
 #ws-epro service
-wget https://raw.githubusercontent.com/vpsvip7/1s/main/ws-epro.service -O /etc/systemd/system/ws-epro.service &&
+wget https://raw.githubusercontent.com/SparkerMoved/SSH-PLUS/main/Modulos/ws-epro.service -O /etc/systemd/system/ws-epro.service &&
 chmod +x /etc/systemd/system/ws-epro.service
 
 #ws-epro port
-wget https://raw.githubusercontent.com/vpsvip7/1s/main/port -O /usr/bin/ws-port -O  &&
+wget https://raw.githubusercontent.com/SparkerMoved/SSH-PLUS/main/Modulos/port.bin -O /usr/bin/ws-port -O  &&
 chmod +x /usr/bin/ws-port
 
 #seting port
@@ -54,7 +54,7 @@ clear
 LP='\033[1;35m'
 NC='\033[0m' # No Color
 echo -e "${LP}"
-echo    "=========== VENTA DE DROPLET🇦🇷🇦🇷  @diegovip7 ============"
+echo    "=========== VENTA DE DROPLET🇦🇷🇦🇷  @maxplayvpn ============"
 echo    "---------------------------------------"
 echo    "   Puerto Local : $openssh"
 echo    "   Puerto Phyton: $wsopenssh"
