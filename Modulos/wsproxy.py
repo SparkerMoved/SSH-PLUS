@@ -1,20 +1,20 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# CRAZY By @Crazy_vpn
 import socket, threading, thread, select, signal, sys, time, getopt
-MSG = '@TMYCOMNECTVPN'
-COR = '<font color="null">'
-FTAG = '</font>'
-PASS = ''
+
+PASS = '101'
 LISTENING_ADDR = '0.0.0.0'
 try:
    LISTENING_PORT = int(sys.argv[1])
 except:
    LISTENING_PORT = 80
-BUFLEN = 8196 * 8
+BUFLEN = 4096 * 4
 TIMEOUT = 60
+MSG = '101'
+COR = '<font color="yellow"><big><big>'
+FTAG = '</font></big></big>'
 DEFAULT_HOST = "127.0.0.1:22"
-RESPONSE = 'HTTP/1.1 101 '+str(COR)+str(MSG)+str(FTAG)+' \r\n\r\n'
+RESPONSE = "HTTP/1.1 101 Web Socket Protocol Handshake\r\nConnection: Upgrade\r\nUpgrade: websocket\r\n\r\nHTTP/1.1 200 Connection Established\r\n\r\n"
  
 class Server(threading.Thread):
     def __init__(self, host, port):
@@ -87,7 +87,7 @@ class ConnectionHandler(threading.Thread):
         self.clientClosed = False
         self.targetClosed = True
         self.client = socClient
-        self.client_buffer = ''
+        self.client_buffer = '101'
         self.server = server
         self.log = 'Connection: ' + str(addr)
 
@@ -116,15 +116,15 @@ class ConnectionHandler(threading.Thread):
         
             hostPort = self.findHeader(self.client_buffer, 'X-Real-Host')
             
-            if hostPort == '':
+            if hostPort == '101':
                 hostPort = DEFAULT_HOST
 
             split = self.findHeader(self.client_buffer, 'X-Split')
 
-            if split != '':
+            if split != '101':
                 self.client.recv(BUFLEN)
             
-            if hostPort != '':
+            if hostPort != '101':
                 passwd = self.findHeader(self.client_buffer, 'X-Pass')
 				
                 if len(PASS) != 0 and passwd == PASS:
@@ -151,14 +151,14 @@ class ConnectionHandler(threading.Thread):
         aux = head.find(header + ': ')
     
         if aux == -1:
-            return ''
+            return '101'
 
         aux = head.find(':', aux)
         head = head[aux+2:]
         aux = head.find('\r\n')
 
         if aux == -1:
-            return ''
+            return '101'
 
         return head[:aux];
 
@@ -184,7 +184,7 @@ class ConnectionHandler(threading.Thread):
         
         self.connect_target(path)
         self.client.sendall(RESPONSE)
-        self.client_buffer = ''
+        self.client_buffer = '101'
 
         self.server.printLog(self.log)
         self.doCONNECT()
@@ -252,7 +252,7 @@ def main(host=LISTENING_ADDR, port=LISTENING_PORT):
     print "\033[0;34m━"*8,"\033[1;32m PROXY WEBSOCKET","\033[0;34m━"*8,"\n"
     print "\033[1;33mIP:\033[1;32m " + LISTENING_ADDR
     print "\033[1;33mPORTA:\033[1;32m " + str(LISTENING_PORT) + "\n"
-    print "\033[0;34m━"*10,"\033[1;32m CRAZY","\033[0;34m━\033[1;37m"*11,"\n"
+    print "\033[0;34m━"*10,"\033[1;32m VPSMANAGER","\033[0;34m━\033[1;37m"*11,"\n"
     
     
     server = Server(LISTENING_ADDR, LISTENING_PORT)
