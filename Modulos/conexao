@@ -2199,7 +2199,7 @@ echo -e "\033[01;31m╚═══════════════════
 			}
 
 			[[ "$(netstat -tlpn | grep 'ws-epro' | wc -l)" != '0' ]] && {
-				echo -e "\033[1;32mSERVICIO: \033[1;33mWS-EPRO: \033[1;32mPUERTO: \033[1;37m$(netstat -nplt | grep 'ws-epro' | awk {'print $4'} | cut -d: -f2 | xargs)"
+				echo -e "\033[01;31m\033[1;32mSERVICIO: \033[1;33mWS-PRO: \033[1;32mPUERTO: \033[1;37m$(netstat -nplt | grep 'ws-epro' | awk {'print $4'} | cut -d: -f2 | xargs)\033[01;31m                      \033[0m"
 				sts15="\033[1;32m◉ "
 			} || {
 				sts15="\033[1;31m○ "
