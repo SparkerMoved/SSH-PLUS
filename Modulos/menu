@@ -55,7 +55,7 @@ speed_test() {
   msg -ama " Descarga:\033[1;92m $down_load"
   msg -bar
   read -t 60 -n 1 -rsp $'\033[1;39m       << Presiona enter para Continuar >>\n'
-  herramientas_fun
+  menu
 }
 
 
