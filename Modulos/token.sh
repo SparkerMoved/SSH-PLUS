@@ -258,6 +258,7 @@ editar () {
     echo -e "$bar1"
     echo -e "Presione Enter para volver al menú anterior..."
     read -p ""
+    menu
   else
     clear
     echo -e "$TITLE"
