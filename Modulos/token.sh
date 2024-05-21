@@ -144,50 +144,61 @@ echo -e "\e[32m  Puertos python: \e[0m"$openvpnport
 echo -e "$bar1"
 fi
 }
+
 #ELIMINAR ID
 eliminar () {
   unset token
   echo -e "$TITLE"
-echo -e ""
-    i=1
-	for total in `cat $file_token`; do
-	[[ -f "$total" ]] && continue
-	option_id[$i]="$total"
+  echo -e ""
+  i=1
+  for total in `cat $file_token`; do
+    [[ -f "$total" ]] && continue
+    option_id[$i]="$total"
     echo -e "$bar1"
-	echo -e "${azul} [$i] > $blanco$total"
-	let i++
-    done
-	i=$(($i - 1))
+    echo -e "${azul} [$i] > $blanco$total"
+    let i++
+  done
+  i=$(($i - 1))
+  echo -e "$bar1"
+  echo -e "${azul} [0] > Regresar al menú anterior${cierre}"
+  echo -e "$bar1"
+  while [[ -z ${option_id[$slct_option]} ]]; do
+    read -p "Seleccione [0-$i]: " slct_option
+    tput cuu1 && tput dl1
+    if [[ -z "$slct_option" || ! "$slct_option" =~ ^[0-9]+$ || "$slct_option" -lt 0 || "$slct_option" -gt "$i" ]]; then
+      echo -e "${rojo}Opción inválida. Regresando al menú principal...${cierre}"
+      sleep 2
+      return
+    elif [[ "$slct_option" -eq 0 ]]; then
+      return
+    fi
+  done
+  token="${option_id[$slct_option]}"
+  sleep 2
+  egrep "^$token" /etc/passwd &> /dev/null
+  if [ $? -eq 0 ]; then
+    userdel -f $token
+    rm -rf /home/$token
+    sed -i "s;$token;;g" $file_token
+    sed -i '/^$/d' $file_token
+    sed -i "/$token/d" $file_client
+    sed -i '/^$/d' $file_client
+    clear
+    echo -e ""
+    echo -e "$TITLE"
     echo -e "$bar1"
-	while [[ -z ${option_id[$slct_option]} ]]; do
-read -p "seleccione [1-$i]: " slct_option
-tput cuu1 && tput dl1
-done
-token="${option_id[$slct_option]}"
-sleep 2
-egrep "^$token" /etc/passwd &> /dev/null
-if [ $? -eq 0 ]; then
-  userdel -f $token
-  rm -rf /home/$token
-  sed -i "s;$token;;g" $file_token
-  sed -i '/^$/d' $file_token
-  sed -i "/$token/d" $file_client
-  sed -i '/^$/d' $file_client
-	clear
-	echo -e ""
-  echo -e "$TITLE"
-  echo -e "$bar1"
-	echo -e " Token Eliminado con Exito"
-	echo -e "$bar1"
-else
-	clear
-	echo -e ""
-  echo -e "$TITLE"
-  echo -e "$bar1"
-	echo -e " El Token que ingresaste no existe"
-	echo -e "$bar1"
-fi
+    echo -e " Token Eliminado con Éxito"
+    echo -e "$bar1"
+  else
+    clear
+    echo -e ""
+    echo -e "$TITLE"
+    echo -e "$bar1"
+    echo -e " El Token que ingresaste no existe"
+    echo -e "$bar1"
+  fi
 }
+
 #EDITAR TOKEN
 editar (){
 unset token
@@ -369,7 +380,7 @@ No_token="$(cat /etc/token/BD | wc -l)"
 #MENU DE USUARIOS
 menu () {
   clear
-echo -e "${melon}               == Token Auth == (${amarillo}onlycode${cierre}${melon})
+echo -e "${melon}               == Token Auth == (${amarillo}maxplay-vpn${cierre}${melon})
 ${bar1}
 ${morado}TOTAL DE REGISTROS: ${rojo}>${cierre} ${azul}ID: ${blanco}$No_token  ${cierre}
 ${bar3}
