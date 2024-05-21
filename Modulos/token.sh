@@ -256,7 +256,7 @@ editar () {
     echo -e "$bar2"
     echo -e " La cuenta vence el: $Expiration_Display"
     echo -e "$bar1"
-    echo -e "Presione Enter para volver al menú anterior..."
+    echo -e "${rojo}Presione Enter para volver al menú anterior...${cierre}"
     read -p ""
     menu
   else
@@ -266,6 +266,9 @@ editar () {
     echo -e ""
     echo -e " El Token que ingresaste no existe"
     echo -e ""
+    echo -e "${rojo}Presione Enter para volver al menú anterior...${cierre}"
+    read -p ""
+    menu
   fi
 }
 
