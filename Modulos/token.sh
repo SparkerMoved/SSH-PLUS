@@ -200,59 +200,71 @@ eliminar () {
 }
 
 #EDITAR TOKEN
-editar (){
-unset token
+editar () {
+  unset token
   echo -e "$TITLE"
-echo -e ""
-    i=1
-	for total in `cat $file_token`; do
-	[[ -f "$total" ]] && continue
-	option_id[$i]="$total"
+  echo -e ""
+  i=1
+  for total in `cat $file_token`; do
+    [[ -f "$total" ]] && continue
+    option_id[$i]="$total"
     echo -e "$bar1"
-	echo -e "${azul} [$i] > $blanco$total"
-	let i++
-    done
-	i=$(($i - 1))
+    echo -e "${azul} [$i] > $blanco$total"
+    let i++
+  done
+  i=$(($i - 1))
+  echo -e "$bar1"
+  echo -e "${azul} [0] > Regresar al menú anterior${cierre}"
+  echo -e "$bar1"
+  while [[ -z ${option_id[$slct_option]} ]]; do
+    read -p "Seleccione [0-$i]: " slct_option
+    tput cuu1 && tput dl1
+    if [[ -z "$slct_option" || ! "$slct_option" =~ ^[0-9]+$ || "$slct_option" -lt 0 || "$slct_option" -gt "$i" ]]; then
+      echo -e "${rojo}Opción inválida. Regresando al menú principal...${cierre}"
+      menu
+      sleep 2
+      return
+    elif [[ "$slct_option" -eq 0 ]]; then
+      menu
+      return
+    fi
+  done
+  token="${option_id[$slct_option]}"
+  sleep 2
+  egrep "^$token" /etc/passwd >/dev/null
+  if [ $? -eq 0 ]; then
+    echo -e "${blanco}Ingrese el número de días${cierre}"
+    echo -e "$bar2"
+    read -p " [Días]: " Days
+    Today=`date +%s`
+    Days_Detailed=$(( $Days * 86400 ))
+    Expire_On=$(($Today + $Days_Detailed))
+    Expiration=$(date -u --date="1970-01-01 $Expire_On sec GMT" +%Y/%m/%d)
+    Expiration_Display=$(date -u --date="1970-01-01 $Expire_On sec GMT" '+%d %b %Y')
+    passwd -u $token
+    usermod -e $Expiration $token
+    egrep "^$token" /etc/passwd >/dev/null
+    echo -e "$PASSWDT\n$PASSWDT\n" | passwd $token &> /dev/null
+    clear
+    echo -e "$TITLE"
     echo -e "$bar1"
-	while [[ -z ${option_id[$slct_option]} ]]; do
-read -p "seleccione [1-$i]: " slct_option
-tput cuu1 && tput dl1
-done
-token="${option_id[$slct_option]}"
-sleep 2
-egrep "^$token" /etc/passwd >/dev/null
-if [ $? -eq 0 ]; then
-echo -e "${blanco}Ingrese el numero de dias${cierre}"
-echo -e "$bar2"
-read -p " [Días]: " Days
-Today=`date +%s`
-Days_Detailed=$(( $Days * 86400 ))
-Expire_On=$(($Today + $Days_Detailed))
-Expiration=$(date -u --date="1970-01-01 $Expire_On sec GMT" +%Y/%m/%d)
-Expiration_Display=$(date -u --date="1970-01-01 $Expire_On sec GMT" '+%d %b %Y')
-passwd -u $token
-usermod -e $Expiration $token
-egrep "^$token" /etc/passwd >/dev/null
-echo -e "$PASSWDT\n$PASSWDT\n"|passwd $token &> /dev/null
-clear
-echo -e "$TILTE"
-echo -e "$bar1"
-echo -e ""
-echo -e " token ID: $token"
-echo -e "$bar2"
-echo -e " Caducidad de cuenta modificada: $Days Dias"
-echo -e "$bar2"
-echo -e " La cuenta vence el: $Expiration_Display"
-echo -e "$bar1"
-else
-clear
-echo -e "$TILTE"
-echo -e "$bar1"
-echo -e ""
-echo -e " El Token que ingresaste no existe"
-echo -e ""
-fi
+    echo -e ""
+    echo -e " token ID: $token"
+    echo -e "$bar2"
+    echo -e " Caducidad de cuenta modificada: $Days Días"
+    echo -e "$bar2"
+    echo -e " La cuenta vence el: $Expiration_Display"
+    echo -e "$bar1"
+  else
+    clear
+    echo -e "$TITLE"
+    echo -e "$bar1"
+    echo -e ""
+    echo -e " El Token que ingresaste no existe"
+    echo -e ""
+  fi
 }
+
 #MOSTAR USURIOS
 lista (){
 	if [ -f /etc/debian_version ]; then
