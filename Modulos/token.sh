@@ -221,10 +221,11 @@ editar () {
     tput cuu1 && tput dl1
     if [[ -z "$slct_option" || ! "$slct_option" =~ ^[0-9]+$ || "$slct_option" -lt 0 || "$slct_option" -gt "$i" ]]; then
       echo -e "${rojo}Opción inválida. Regresando al menú principal...${cierre}"
+      sleep 3
       menu
-      sleep 2
       return
     elif [[ "$slct_option" -eq 0 ]]; then
+      sleep 3
       menu
       return
     fi
@@ -255,6 +256,8 @@ editar () {
     echo -e "$bar2"
     echo -e " La cuenta vence el: $Expiration_Display"
     echo -e "$bar1"
+    echo -e "Presione Enter para volver al menú anterior..."
+    read -p ""
   else
     clear
     echo -e "$TITLE"
