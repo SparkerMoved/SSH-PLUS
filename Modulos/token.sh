@@ -230,11 +230,11 @@ editar () {
     tput cuu1 && tput dl1
     if [[ -z "$slct_option" || ! "$slct_option" =~ ^[0-9]+$ || "$slct_option" -lt 0 || "$slct_option" -gt "$i" ]]; then
       echo -e "${rojo}Opción inválida. Regresando al menú principal...${cierre}"
-      sleep 3
+      sleep 2
       menu
       return
     elif [[ "$slct_option" -eq 0 ]]; then
-      sleep 3
+      sleep 2
       menu
       return
     fi
@@ -275,9 +275,6 @@ editar () {
     echo -e ""
     echo -e " El Token que ingresaste no existe"
     echo -e ""
-    echo -e "${rojo}Presione Enter para volver al menú anterior...${cierre}"
-    read -p ""
-    menu
   fi
 }
 
