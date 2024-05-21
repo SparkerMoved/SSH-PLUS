@@ -142,6 +142,9 @@ echo -e "\e[32m  Puertos Squid: \e[0m"$squidport
 echo -e "\e[32m  Puertos Openvpn: \e[0m"$openvpnport
 echo -e "\e[32m  Puertos python: \e[0m"$openvpnport
 echo -e "$bar1"
+echo -e "${rojo}Presione Enter para volver al menú anterior...${cierre}"
+read -p ""
+menu
 fi
 }
 
@@ -168,8 +171,11 @@ eliminar () {
     if [[ -z "$slct_option" || ! "$slct_option" =~ ^[0-9]+$ || "$slct_option" -lt 0 || "$slct_option" -gt "$i" ]]; then
       echo -e "${rojo}Opción inválida. Regresando al menú principal...${cierre}"
       sleep 2
+      menu
       return
     elif [[ "$slct_option" -eq 0 ]]; then
+      sleep 2
+      menu
       return
     fi
   done
@@ -189,6 +195,9 @@ eliminar () {
     echo -e "$bar1"
     echo -e " Token Eliminado con Éxito"
     echo -e "$bar1"
+    echo -e "${rojo}Presione Enter para volver al menú anterior...${cierre}"
+    read -p ""
+    menu
   else
     clear
     echo -e ""
@@ -272,7 +281,7 @@ editar () {
   fi
 }
 
-#MOSTAR USURIOS
+#MOSTRAR USURIOS
 lista (){
 	if [ -f /etc/debian_version ]; then
 	UIDN=1000
@@ -303,7 +312,11 @@ No_Users="$(awk -F: '$3 >= '$UIDN' && $1 != "nobody" {print $1}' /etc/passwd | w
 echo -e "$bar2"
 echo -e " Numero de Tokens: "$No_Users
 echo -e "$bar2"
+echo -e "${rojo}Presione Enter para volver al menú anterior...${cierre}"
+read -p ""
+menu
 }
+
 #ELIMINAR EXPIRADOS
 expirados () {
 clear
@@ -325,15 +338,22 @@ done
 echo -e ""
 echo -e "  Todos \e[31mLos token expirados\e[0m han sido Eliminados"
 echo -e "$bar1"
+echo -e "${rojo}Presione Enter para volver al menú anterior...${cierre}"
+read -p ""
+menu
 }
+
 informacion_clientes () {
   GreenBG="\033[42;31m"
      echo -e "${GreenBG}                 INFORMACION DE CLIENTES                 ${cierre}"
     echo -e "$bar2"
     cat $file_client | column -t
     echo -e "$bar1"
-
+    echo -e "${rojo}Presione Enter para volver al menú anterior...${cierre}"
+    read -p ""
+    menu
 }
+
 online (){                                                               
 clear
 TITLE="${blanco}MAXPLAY ${verdeR}VPN"
@@ -394,7 +414,11 @@ fi
 
 echo " "
 echo " "
+echo -e "${rojo}Presione Enter para volver al menú anterior...${cierre}"
+read -p ""
+menu
 }
+
 No_token="$(cat /etc/token/BD | wc -l)"
 #MENU DE USUARIOS
 menu () {
