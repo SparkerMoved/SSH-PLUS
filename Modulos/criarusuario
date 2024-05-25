@@ -379,7 +379,6 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 		echo -e "\033[1;32m 🔑CONTRASEÑA: \033[1;37m$password"
 		echo -e "\033[1;32m ⌛EXPIRA EN: \033[1;37m$gui"
 		echo -e "\033[1;32m 📲LIMITE DE CONEXIONES: \033[1;37m$sshlimiter"
-echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLVER AL \033[1;33mMENU!\033[0m"; read
 	}
 } || {
 	clear
@@ -388,13 +387,4 @@ echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLVER AL \033[1;33mMENU!\033[0m"; re
 		echo -e "\033[1;32m 🔑CONTRASEÑA: \033[1;37m$password"
 		echo -e "\033[1;32m ⌛EXPIRA EN: \033[1;37m$gui"
 		echo -e "\033[1;32m 📲LIMITE DE CONEXION: \033[1;37m$sshlimiter"
-
-        echo -e "\E[44;1;37m======TIPO DE CONEXIONES======\E[0m"
-        echo -e "\n  USUARIO UDP DONWEB 👇🏻"
-	    echo -e "\n $IP:1-36712@$username:$password"
-        echo -e "\n  USUARIO UDP INET👇🏻"
-        echo -e "\n $IP:1-65535@$username:$password"
-        echo -e "\n  USUARIO WEBSOCKET👇🏻"
-        echo -e "\n $IP:80@$username:$password"
-echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLVER AL \033[1;33mMENU!\033[0m"; read
 }
