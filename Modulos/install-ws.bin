@@ -115,7 +115,7 @@ if command -v ws-epro &> /dev/null; then
     echo ""
     echo "0: Salir"
     echo ""
-    echo "★ Elige una opcion : "
+    read -p "★ Elige una opcion : " option
 
     case $option in
         1 | 01)
