@@ -27,10 +27,11 @@ install_wsepro() {
     echo -e "\E[41;1;37m       🚀   DEFINIR PUERTOS WEBSOCKET WS-PRO   🚀           \E[0m"
     echo ""
     sleep 1
-    read -p "   Puerto Local : " openssh
-    read -p "   Puerto Phyton : " wsopenssh
+    read -p "$(echo -e "\033[1;32mPuerto Local \033[1;37m: ")" openssh
     echo ""
-    echo -e "\033[1;32Puertos definidos con exito!!!\033[1;33m"
+    read -p "$(echo -e "\033[1;32mPuerto Phyton \033[1;37m: ")" wsopenssh
+    echo ""
+    echo -e "\033[1;32mPuertos definidos con exito!!!\033[1;33m"
 
     WS_DIR=/usr/local/etc/ws-epro
     if [ -d "$WS_DIR" ]; then
@@ -38,7 +39,8 @@ install_wsepro() {
     fi
     mkdir "$WS_DIR"
 
-    echo "EMPEZAMOS A CONFIGURAR WEBSOCKET WS-EPRO..."
+    echo ""
+    echo -e "\033[1;32mEMPEZAMOS A CONFIGURAR WEBSOCKET WS-EPRO...\033[1;33m"
     sleep 2
     {
         echo "# verbose level 0=info, 1=verbose, 2=very verbose"
@@ -59,7 +61,8 @@ install_wsepro() {
     systemctl enable ws-epro
     systemctl start ws-epro
 
-    echo "CONFIGURANDO WEBSOCKET WS-PRO..."
+    echo ""
+    echo -e "\033[1;32mCONFIGURANDO WEBSOCKET WS-PRO...\033[1;33m"
     sleep 3
     clear
     LP='\033[1;35m'
@@ -67,10 +70,11 @@ install_wsepro() {
     echo -e "${LP}"
     echo -e "\E[41;1;37m        MAXPLAY VPN  🚀           \E[0m"
     echo ""
-    echo "   PUERTO LOCAL : $openssh"
-    echo "   PUERTO PHYTON : $wsopenssh"
+    echo -e "\033[1;32mPUERTO LOCAL : $openssh\033[1;33m"
     echo ""
-    echo -e "\033[1;32WEBSOCKET WS-PRO INSTALADO CON EXITO !!\033[1;33m"
+    echo -e "\033[1;32mPUERTO PHYTON : $wsopenssh\033[1;33m"
+    echo ""
+    echo -e "\033[1;32mWEBSOCKET WS-PRO INSTALADO CON EXITO !!\033[1;33m"
     echo -e "${NC}"
     rm -rf install-ws && cat /dev/null > ~/.bash_history && history -c
 }
@@ -112,11 +116,11 @@ if command -v ws-epro &> /dev/null; then
     figlet 'MAXPLAY-VPN' | lolcat
     echo -e "\E[41;1;37m       🚀   CONFIGURAR WEBSOCKET WS-PRO   🚀           \E[0m"
     echo ""
-    echo -e "\033[1;32[1]: Activar Websocket ws-epro\033[1;33m"
+    echo -e "\033[1;32m[1]: Activar Websocket ws-epro\033[1;33m"
     echo ""
-    echo -e "\033[1;32[2]: Desinstalar Websocket ws-pro\033[1;33m"
+    echo -e "\033[1;32m[2]: Desinstalar Websocket ws-pro\033[1;33m"
     echo ""
-    echo -e "\033[1;32[0]: Salir\033[1;33m"
+    echo -e "\033[1;32m[0]: Salir\033[1;33m"
     echo ""
     read -p "$(echo -e "\033[1;32m★ Elige una opcion \033[1;37m: ")" option
 
