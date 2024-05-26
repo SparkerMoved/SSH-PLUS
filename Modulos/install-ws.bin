@@ -24,10 +24,13 @@ install_wsepro() {
 
     # Configuración de puertos
     clear
-    echo "ELEGIR PUERTOS"
+    echo "---------------------------------------"
+    echo "            ELEGIR PUERTOS             "
+    echo "---------------------------------------"
     sleep 1
-    read -p "Puerto Local : " openssh
-    read -p "Puerto Phyton : " wsopenssh
+    read -p "PUERTO LOCAL : " openssh
+    read -p "PUERTO PYTHON : " wsopenssh
+    echo "---------------------------------------"
 
     WS_DIR=/usr/local/etc/ws-epro
     if [ -d "$WS_DIR" ]; then
@@ -35,17 +38,19 @@ install_wsepro() {
     fi
     mkdir "$WS_DIR"
 
-    echo "EMPEZAMOS A CONFIGURAR WS-EPRO..."
+    echo "EMPEZAMOS A CONFIGURAR WEBSOCKET WS-EPRO..."
     sleep 2
-    echo "# verbose level 0=info, 1=verbose, 2=very verbose" >> /usr/local/etc/ws-epro/config.yml
-    echo "verbose: 0" >> /usr/local/etc/ws-epro/config.yml
-    echo "listen:"  >> /usr/local/etc/ws-epro/config.yml
-    echo "##openssh" >> /usr/local/etc/ws-epro/config.yml
-    echo "- target_host: 127.0.0.1" >> /usr/local/etc/ws-epro/config.yml
-    echo "##portopenssh" >> /usr/local/etc/ws-epro/config.yml
-    echo "  target_port: $openssh" >> /usr/local/etc/ws-epro/config.yml
-    echo "##wsopenssh" >> /usr/local/etc/ws-epro/config.yml
-    echo "  listen_port: $wsopenssh" >> /usr/local/etc/ws-epro/config.yml
+    {
+        echo "# verbose level 0=info, 1=verbose, 2=very verbose"
+        echo "verbose: 0"
+        echo "listen:"
+        echo "##openssh"
+        echo "- target_host: 127.0.0.1"
+        echo "##portopenssh"
+        echo "  target_port: $openssh"
+        echo "##wsopenssh"
+        echo "  listen_port: $wsopenssh"
+    } > /usr/local/etc/ws-epro/config.yml
 
     chmod +x /usr/local/etc/ws-epro/config.yml
 
@@ -54,19 +59,19 @@ install_wsepro() {
     systemctl enable ws-epro
     systemctl start ws-epro
 
-    echo "CONFIGURANDO TU DROPLET 🇦🇷🌍.."
+    echo "CONFIGURANDO WEBSOCKET WS-PRO.."
     sleep 3
     clear
     LP='\033[1;35m'
     NC='\033[0m' # No Color
     echo -e "${LP}"
-    echo "=========== VENTA DE DROPLET🇦🇷🇦🇷  @maxplayvpn ============"
+    echo "===========   MAXPLAY VPN  ============"
     echo "---------------------------------------"
-    echo "   Puerto Local : $openssh"
-    echo "   Puerto Phyton: $wsopenssh"
+    echo "   PUERTO LOCAL : $openssh"
+    echo "   PUERTO PHYTON : $wsopenssh"
     echo "---------------------------------------"
     echo ""
-    echo "Probado en ubuntu 20"
+    echo "WEBSOCKET WS-PRO INSTALADO CON EXITO !!"
     echo -e "${NC}"
     rm -rf install-ws && cat /dev/null > ~/.bash_history && history -c
 }
@@ -75,7 +80,7 @@ install_wsepro() {
 disable_wsepro() {
     systemctl stop ws-epro
     systemctl disable ws-epro
-    echo "ws-epro ha sido desactivado."
+    echo "Websocket ws-epro ha sido desactivado."
 }
 
 # Función para activar ws-epro
@@ -88,7 +93,7 @@ enable_wsepro() {
     systemctl daemon-reload
     systemctl enable ws-epro
     systemctl start ws-epro
-    echo "ws-epro ha sido activado."
+    echo "Websocket ws-epro ha sido activado."
 }
 
 # Función para desinstalar ws-epro
@@ -100,27 +105,26 @@ uninstall_wsepro() {
     rm -f /usr/bin/ws-port
     rm -rf /usr/local/etc/ws-epro
     systemctl daemon-reload
-    echo "ws-epro ha sido desinstalado."
+    echo "Websocket ws-epro ha sido desinstalado."
 }
 
 # Verificar si ws-epro está instalado
 if command -v ws-epro &> /dev/null; then
-    echo "ws-epro ya está instalado."
-    echo "¿Qué te gustaría hacer?"
-    echo "1. Desactivar ws-epro"
-    echo "2. Activar ws-epro"
-    echo "3. Desinstalar ws-epro"
-    echo "4. Salir"
+    echo "---------------------------------------"
+    echo "**CONFIGURAR WEBSOCKET WS-PRO**"
+    echo "---------------------------------------"
+    echo "1. Activar Websocket ws-epro"
+    echo "2. Desinstalar Websocket ws-epro"
+    echo "0. Salir"
+    echo "---------------------------------------"
+    echo ""
     read -p "Elige una opción: " option
 
     case $option in
-        1)
-            disable_wsepro
-            ;;
-        2)
+        1 | 01)
             enable_wsepro
             ;;
-        3)
+        2 | 02)
             uninstall_wsepro
             ;;
         *)
@@ -130,6 +134,3 @@ if command -v ws-epro &> /dev/null; then
 else
     install_wsepro
 fi
-
-echo "ENTER para volver al MENU!"
-read
