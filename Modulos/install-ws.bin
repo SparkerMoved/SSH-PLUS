@@ -8,11 +8,19 @@ install_wsepro() {
     wget https://github.com/SparkerMoved/SSH-PLUS/raw/main/Modulos/ws-epro -O /usr/local/bin/ws-epro &&
     chmod +x /usr/local/bin/ws-epro
 
-    wget https://raw.githubusercontent.com/SparkerMoved/SSH-PLUS/main/Modulos/ws-epro.service -O /etc/systemd/system/ws-epro.service &&
-    chmod +x /etc/systemd/system/ws-epro.service
+    if wget https://raw.githubusercontent.com/SparkerMoved/SSH-PLUS/main/Modulos/ws-epro.service -O /etc/systemd/system/ws-epro.service; then
+        chmod +x /etc/systemd/system/ws-epro.service
+    else
+        echo "Error al descargar ws-epro.service"
+        exit 1
+    fi
 
-    wget https://raw.githubusercontent.com/SparkerMoved/SSH-PLUS/main/Modulos/port.bin -O /usr/bin/ws-port &&
-    chmod +x /usr/bin/ws-port
+    if wget https://raw.githubusercontent.com/SparkerMoved/SSH-PLUS/main/Modulos/port.bin -O /usr/bin/ws-port; then
+        chmod +x /usr/bin/ws-port
+    else
+        echo "Error al descargar port.bin"
+        exit 1
+    fi
 
     # Configuración de puertos
     clear
@@ -42,6 +50,7 @@ install_wsepro() {
     chmod +x /usr/local/etc/ws-epro/config.yml
 
     # Habilitar y arrancar el servicio
+    systemctl daemon-reload
     systemctl enable ws-epro
     systemctl start ws-epro
 
@@ -71,6 +80,7 @@ disable_wsepro() {
 
 # Función para activar ws-epro
 enable_wsepro() {
+    systemctl daemon-reload
     systemctl enable ws-epro
     systemctl start ws-epro
     echo "ws-epro ha sido activado."
@@ -84,6 +94,7 @@ uninstall_wsepro() {
     rm -f /etc/systemd/system/ws-epro.service
     rm -f /usr/bin/ws-port
     rm -rf /usr/local/etc/ws-epro
+    systemctl daemon-reload
     echo "ws-epro ha sido desinstalado."
 }
 
