@@ -110,15 +110,18 @@ uninstall_wsepro() {
 
 # Verificar si ws-epro está instalado
 if command -v ws-epro &> /dev/null; then
-    echo "---------------------------------------"
-    echo "**CONFIGURAR WEBSOCKET WS-PRO**"
-    echo "---------------------------------------"
-    echo "1. Activar Websocket ws-epro"
-    echo "2. Desinstalar Websocket ws-epro"
-    echo "0. Salir"
-    echo "---------------------------------------"
+    figlet 'MAXPLAY-VPN' | lolcat
+    echo -e "\E[41;1;37m       🚀   CONFIGURAR WEBSOCKET WS-PRO   🚀           \E[0m"
     echo ""
-    read -p "Elige una opción: " option
+    echo -e "\033[1;32m1. Activar Websocket ws-epro\033[1;33m"
+    echo ""
+    echo -e "\033[1;32m2. Desinstalar Websocket ws-epro\033[1;33m"
+    echo ""
+    echo -e "\033[1;32m0. Salir\033[1;33m"
+    echo ""
+    echo -e "\033[1;32m---------------------------------------\033[1;33m"
+    echo ""
+    read -p "★ \033[1;32mElige una opcion \033[1;37m:" option
 
     case $option in
         1 | 01)
