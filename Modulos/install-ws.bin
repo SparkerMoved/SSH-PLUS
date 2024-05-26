@@ -80,6 +80,11 @@ disable_wsepro() {
 
 # Función para activar ws-epro
 enable_wsepro() {
+    if [ ! -f /etc/systemd/system/ws-epro.service ]; then
+        echo "El archivo de servicio ws-epro.service no existe. Reinstalando..."
+        install_wsepro
+        return
+    fi
     systemctl daemon-reload
     systemctl enable ws-epro
     systemctl start ws-epro
@@ -125,3 +130,6 @@ if command -v ws-epro &> /dev/null; then
 else
     install_wsepro
 fi
+
+echo "ENTER para volver al MENU!"
+read
