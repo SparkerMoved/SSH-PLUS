@@ -124,7 +124,7 @@ if command -v ws-epro &> /dev/null; then
             uninstall_wsepro
             ;;
         *)
-            echo -e "\E[41;1;37mSaliendo...\E[0m"
+            echo "Saliendo..."
             ;;
     esac
 else
