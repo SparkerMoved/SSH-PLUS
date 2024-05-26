@@ -27,8 +27,8 @@ install_wsepro() {
     echo -e "\E[41;1;37m       🚀   DEFINIR PUERTOS WEBSOCKET WS-PRO   🚀           \E[0m"
     echo ""
     sleep 1
-    echo "   PUERTO LOCAL : " openssh
-    echo "   PUERTO PYTHON : " wsopenssh
+    read -p "   Puerto Local : " openssh
+    read -p "   Puerto Phyton : " wsopenssh
     echo ""
     echo "Puertos definidos con exito!!!"
 
@@ -62,13 +62,16 @@ install_wsepro() {
     echo "CONFIGURANDO WEBSOCKET WS-PRO..."
     sleep 3
     clear
+    LP='\033[1;35m'
+    NC='\033[0m' # No Color
+    echo -e "${LP}"
     echo -e "\E[41;1;37m        MAXPLAY VPN  🚀           \E[0m"
     echo ""
     echo "   PUERTO LOCAL : $openssh"
     echo "   PUERTO PHYTON : $wsopenssh"
     echo ""
     echo "WEBSOCKET WS-PRO INSTALADO CON EXITO !!"
-
+    echo -e "${NC}"
     rm -rf install-ws && cat /dev/null > ~/.bash_history && history -c
 }
 
