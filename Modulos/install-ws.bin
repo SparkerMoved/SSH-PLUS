@@ -45,13 +45,13 @@ install_wsepro() {
     systemctl enable ws-epro
     systemctl start ws-epro
 
-    echo "CONFIGURANDO TU VPS..."
+    echo "CONFIGURANDO TU DROPLET 🇦🇷🌍.."
     sleep 3
     clear
     LP='\033[1;35m'
     NC='\033[0m' # No Color
     echo -e "${LP}"
-    echo "=========== WEBSOCKET WS-EPRO ============"
+    echo "=========== VENTA DE DROPLET🇦🇷🇦🇷  @maxplayvpn ============"
     echo "---------------------------------------"
     echo "   Puerto Local : $openssh"
     echo "   Puerto Phyton: $wsopenssh"
@@ -76,13 +76,25 @@ enable_wsepro() {
     echo "ws-epro ha sido activado."
 }
 
+# Función para desinstalar ws-epro
+uninstall_wsepro() {
+    systemctl stop ws-epro
+    systemctl disable ws-epro
+    rm -f /usr/local/bin/ws-epro
+    rm -f /etc/systemd/system/ws-epro.service
+    rm -f /usr/bin/ws-port
+    rm -rf /usr/local/etc/ws-epro
+    echo "ws-epro ha sido desinstalado."
+}
+
 # Verificar si ws-epro está instalado
 if command -v ws-epro &> /dev/null; then
     echo "ws-epro ya está instalado."
     echo "¿Qué te gustaría hacer?"
     echo "1. Desactivar ws-epro"
     echo "2. Activar ws-epro"
-    echo "3. Salir"
+    echo "3. Desinstalar ws-epro"
+    echo "4. Salir"
     read -p "Elige una opción: " option
 
     case $option in
@@ -91,6 +103,9 @@ if command -v ws-epro &> /dev/null; then
             ;;
         2)
             enable_wsepro
+            ;;
+        3)
+            uninstall_wsepro
             ;;
         *)
             echo "Saliendo..."
