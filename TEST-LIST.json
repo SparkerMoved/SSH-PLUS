@@ -1,33 +1,20 @@
 [
   {
-    "name": "TEST LIST",
+    "name": "LIST MULTI CANALES",
     "samples": [
-      {
-        "name": "futbol py 1",
-        "uri": "5yZC/OUhWZS4yUH7V7I93n7fy7WEz5hMIWMm+QC56uxnrhoipzept6br/uXf+Xub5/grOcE6Px9YvndFWVYyyg==",
-        "icono": "https://i.ibb.co/bQxPJ4D/ead-QN2-W9-400x400.jpg"
-      },
-      {
-        "name": "futbol py 2",
-        "uri": "n6ooUqr/DOHo+CeqsF0lQDjtjg5r+wm+06nO93XwSJL+5AElbw02WaLzRfwvaT/cIoxHirrdN43y9ZlTvGQ5JWOgNkzkZl4J9asDnniiFsE=",
-        "icono": "https://i.ibb.co/bQxPJ4D/ead-QN2-W9-400x400.jpg"
-      },
-      {
-        "name": "futbol py opcional",
-        "uri": "9DyV3dz0MayRnWEp8rSiKBrU+ULExULik8o7UrzQ5uuw83EnfDh+YoXMP75UbErwPal0RJsVjQ9qwTcas+gJcJrcW0bGa375zJchJ6psLsc=",
-        "icono": "https://i.ibb.co/bQxPJ4D/ead-QN2-W9-400x400.jpg"
-      },
-      {
-        "name": "TIGO GUATEMALA",
-        "uri": "oj/fiTl3liwx1+b1GfU+UxJX9lUW24ZlLho4JQDSJH8lbNyt2iOXaFUydh/7ff9ExYwohoK+nlORfnFOFpJDQqRQlgSLFyqeXPsvi8aBUOE=",
-        "icono": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/8e/4f/7c/8e4f7ce7-727e-d147-3a61-abe7c8fd6192/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.png"
-      },
       {
         "name": "KIDOO",
         "uri": "PieKW3Tj9RSHDO1/43uuAuJBqLU4R7uk3zC/JZT7ZPRm52oluBP2ktAUAxcrJKM8+B+GpLcojnHd9qJxds8iKtsyPurUVm0kZinerPzc1gw=",
         "icono": "https://panelssh.com.ar/Local/ext/Img/kidoo.png",
         "drm_scheme": "clearkey",
         "drm_license_uri": "8KTT32IP0mRywSaFlkAPREDeGmmAEE/GMXBq4eqvlee31S4IL7lI5RkygFs+kHV/mfAS3uR/jS6ObeO1FWp1wA=="
+      },
+      {
+        "name": "TYC SPORTS",
+        "icono": "https://panelssh.com.ar/Local/ext/Img/tycsports.png",
+        "uri": "pl37HABcx8U0ISLD9vaWF1Hofbof8I/uXI0/o27wI75bXRwgxbz6xsYOpWPZvPUMXTuBwUJXVmqO5KDTFsme5WoniKjk33cMII1vDqLYo74=",
+        "drm_scheme": "clearkey",
+        "drm_license_url": "8KTT32IP0mRywSaFlkAPREDeGmmAEE/GMXBq4eqvlefWwTS1GCS6Cj0wMq5+Z4v0fk/PCd5IfR7l6TrcKgzcyQ=="
       }
     ]
   },
