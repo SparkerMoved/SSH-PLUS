@@ -1,6 +1,6 @@
 [
   {
-    "name": "Por favor, ponte en contacto con tu proveedor para la actualización de la aplicación.",
+    "name": "TEST LIST",
     "samples": [
       {
         "name": "futbol py 1",
@@ -21,21 +21,56 @@
         "name": "TIGO GUATEMALA",
         "uri": "oj/fiTl3liwx1+b1GfU+UxJX9lUW24ZlLho4JQDSJH8lbNyt2iOXaFUydh/7ff9ExYwohoK+nlORfnFOFpJDQqRQlgSLFyqeXPsvi8aBUOE=",
         "icono": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/8e/4f/7c/8e4f7ce7-727e-d147-3a61-abe7c8fd6192/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.png"
+      }
+    ]
+  },
+  {
+    "name": "TEST LIST 2",
+    "samples": [
+      {
+        "name": "futbol py 1",
+        "uri": "5yZC/OUhWZS4yUH7V7I93n7fy7WEz5hMIWMm+QC56uxnrhoipzept6br/uXf+Xub5/grOcE6Px9YvndFWVYyyg==",
+        "icono": "https://i.ibb.co/bQxPJ4D/ead-QN2-W9-400x400.jpg"
       },
       {
-        "name": "NACIONAL VS DEPORTIVO MALDONADO",
-        "icono": "https://i.postimg.cc/8zDQ34D8/OIP-2-removebg-preview.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgeAFt4PrusLueyAzoyoKrru8+VxYq7Fl6OBWi+MAjVmI="
+        "name": "futbol py 2",
+        "uri": "n6ooUqr/DOHo+CeqsF0lQDjtjg5r+wm+06nO93XwSJL+5AElbw02WaLzRfwvaT/cIoxHirrdN43y9ZlTvGQ5JWOgNkzkZl4J9asDnniiFsE=",
+        "icono": "https://i.ibb.co/bQxPJ4D/ead-QN2-W9-400x400.jpg"
       },
       {
-        "name": "NACIONAL VS DEPORTIVO MALDONADO OPC2 ",
-        "icono": "https://i.postimg.cc/8zDQ34D8/OIP-2-removebg-preview.png",
-        "uri": "pjoJS37IeAonhRA6yTyrw3KQxCL4ouQoY8ujkabk/oEuzKySIWr3JLwak9p1lWSggpIoFzMqVHXczMZmPT1kJDohaYYCkzUbrjlPRS6kgaMZikpUxEpf9ucrCeWIMGgBQ4RS5yluzlDEQEWje7A3k6wgIiJPKZL4z60ITEViUJS/1VZQXwb4In7rT2AMTV3bafjz3KeS9qWlVQiVMZHQjQ=="
+        "name": "futbol py opcional",
+        "uri": "9DyV3dz0MayRnWEp8rSiKBrU+ULExULik8o7UrzQ5uuw83EnfDh+YoXMP75UbErwPal0RJsVjQ9qwTcas+gJcJrcW0bGa375zJchJ6psLsc=",
+        "icono": "https://i.ibb.co/bQxPJ4D/ead-QN2-W9-400x400.jpg"
       },
       {
-        "name": "CERRO PORTEÑO VS GUARANI ",
-        "icono": "https://i.postimg.cc/m2Q5nZMX/OIP-3.jpg",
-        "uri": "pjoJS37IeAonhRA6yTyrw+5Iaqk/UXu8AA+GjMHjybC/tX1J6x7Pos3MIon8zAq9H/EYDrKk2RXSQ6vO8s6zJgFWBUN5J3LGzUrIOnoAu2uGHJ2uZ5orBvbpeIDKK/wrPHWneZatpwkAp8ienEW6AlVj8I/o8fwauWZ3GffnHCJdL4qMMhb1RqTsxve1KZVaItiYZRi7rzp2F0FfmIlr3Q=="
+        "name": "TIGO GUATEMALA",
+        "uri": "oj/fiTl3liwx1+b1GfU+UxJX9lUW24ZlLho4JQDSJH8lbNyt2iOXaFUydh/7ff9ExYwohoK+nlORfnFOFpJDQqRQlgSLFyqeXPsvi8aBUOE=",
+        "icono": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/8e/4f/7c/8e4f7ce7-727e-d147-3a61-abe7c8fd6192/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.png"
+      }
+    ]
+  },
+  {
+    "name": "TEST LIST 3",
+    "samples": [
+      {
+        "name": "futbol py 1",
+        "uri": "5yZC/OUhWZS4yUH7V7I93n7fy7WEz5hMIWMm+QC56uxnrhoipzept6br/uXf+Xub5/grOcE6Px9YvndFWVYyyg==",
+        "icono": "https://i.ibb.co/bQxPJ4D/ead-QN2-W9-400x400.jpg"
+      },
+      {
+        "name": "futbol py 2",
+        "uri": "n6ooUqr/DOHo+CeqsF0lQDjtjg5r+wm+06nO93XwSJL+5AElbw02WaLzRfwvaT/cIoxHirrdN43y9ZlTvGQ5JWOgNkzkZl4J9asDnniiFsE=",
+        "icono": "https://i.ibb.co/bQxPJ4D/ead-QN2-W9-400x400.jpg"
+      },
+      {
+        "name": "futbol py opcional",
+        "uri": "9DyV3dz0MayRnWEp8rSiKBrU+ULExULik8o7UrzQ5uuw83EnfDh+YoXMP75UbErwPal0RJsVjQ9qwTcas+gJcJrcW0bGa375zJchJ6psLsc=",
+        "icono": "https://i.ibb.co/bQxPJ4D/ead-QN2-W9-400x400.jpg"
+      },
+      {
+        "name": "TIGO GUATEMALA",
+        "uri": "oj/fiTl3liwx1+b1GfU+UxJX9lUW24ZlLho4JQDSJH8lbNyt2iOXaFUydh/7ff9ExYwohoK+nlORfnFOFpJDQqRQlgSLFyqeXPsvi8aBUOE=",
+        "icono": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/8e/4f/7c/8e4f7ce7-727e-d147-3a61-abe7c8fd6192/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.png"
       }
     ]
   }
