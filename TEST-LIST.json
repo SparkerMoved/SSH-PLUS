@@ -4,139 +4,22 @@
     "samples": [
       {
         "name": "NACIONAL VS DEPORTIVO MALDONADO",
-        "ico": "https://i.postimg.cc/8zDQ34D8/OIP-2-removebg-preview.png",
+        "icono": "https://i.postimg.cc/8zDQ34D8/OIP-2-removebg-preview.png",
         "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgeAFt4PrusLueyAzoyoKrru8+VxYq7Fl6OBWi+MAjVmI=",
         "drm_scheme": "",
         "drm_license_url": ""
       },
       {
         "name": "NACIONAL VS DEPORTIVO MALDONADO OPC2 ",
-        "ico": "https://i.postimg.cc/8zDQ34D8/OIP-2-removebg-preview.png",
+        "icono": "https://i.postimg.cc/8zDQ34D8/OIP-2-removebg-preview.png",
         "uri": "pjoJS37IeAonhRA6yTyrw3KQxCL4ouQoY8ujkabk/oEuzKySIWr3JLwak9p1lWSggpIoFzMqVHXczMZmPT1kJDohaYYCkzUbrjlPRS6kgaMZikpUxEpf9ucrCeWIMGgBQ4RS5yluzlDEQEWje7A3k6wgIiJPKZL4z60ITEViUJS/1VZQXwb4In7rT2AMTV3bafjz3KeS9qWlVQiVMZHQjQ==",
         "drm_scheme": "",
         "drm_license_url": ""
       },
       {
         "name": "CERRO PORTEÑO VS GUARANI ",
-        "ico": "https://i.postimg.cc/m2Q5nZMX/OIP-3.jpg",
+        "icono": "https://i.postimg.cc/m2Q5nZMX/OIP-3.jpg",
         "uri": "pjoJS37IeAonhRA6yTyrw+5Iaqk/UXu8AA+GjMHjybC/tX1J6x7Pos3MIon8zAq9H/EYDrKk2RXSQ6vO8s6zJgFWBUN5J3LGzUrIOnoAu2uGHJ2uZ5orBvbpeIDKK/wrPHWneZatpwkAp8ienEW6AlVj8I/o8fwauWZ3GffnHCJdL4qMMhb1RqTsxve1KZVaItiYZRi7rzp2F0FfmIlr3Q==",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      }
-    ]
-  },
-  {
-    "name": "CANALES DE REFUERZO",
-    "samples": [
-      {
-        "name": "AMERICA TV ",
-        "ico": "https://img.mundotv.fun/americatv.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgj0YrZOgFw+A4YpaNkG5KzYtO/6iww6zHLRi07R9ZP9g=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "TELEFE",
-        "ico": "https://img.mundotv.fun/telefe.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNggbVT2CAXFEr/+BO+0V+ZHTRMnxPNqd4RvGnLT6SGCFY=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "TN NOTICIAS  ",
-        "ico": "https://img.mundotv.fun/tn.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgSSR7IHPPZFgyTYRgSthOBITsdugn5/oq/Ntie9SjUWU=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "EL TRECE",
-        "ico": "https://img.mundotv.fun/eltrece.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgY5ce3MhWw2+O4fvbD0zTV6tHk/MT8o3ZP3MQgQgP4eU=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "CANAL 9",
-        "ico": "https://img.mundotv.fun/canal9.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgp8Q1c0s0itdJ2BYniC2tgb2NG7uQS3UIZpX5eiR63Y8=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "CRONICA TV",
-        "ico": "https://img.mundotv.fun/cronicatv.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgMJ3YkDqBPjinsr0foj5rzLscd43BJ6mrXiJDagCYOxU=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "A24",
-        "ico": "https://img.mundotv.fun/a24_new.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgXhbqCZypOWbchfIaFAB6/38gpMa/M5lyiKDVzCCtK8A=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "TNT SPORTS",
-        "ico": "https://img.mundotv.fun/tnt_sports_2024.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgi4TBG0F1cRgvp9KCzlp6BGbOQVwjGzjIC+3z01sUIM4=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "ESPN PREMIUM",
-        "ico": "https://img.mundotv.fun/espnpremium.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgD6d067TWhxCNMxaZWMTuozKRmPV4fBnNvJP3tlkOxsg=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "ESPN ",
-        "ico": "https://img.mundotv.fun/espn.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgaEbpBBXPmV6ZPa3r8/4bFQyXn5rZWvhkITp8ykQlQ1c=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "ESPN 2",
-        "ico": "https://img.mundotv.fun/espn2.png",
-        "uri": "wPasLvzHeuoTxMh/ba/WfuMDiGDg2KRmK3+7KqCMgN3ojrXzulZiwoKpeP3ezu0DCCJq8cmrziUjyoMGJnxPQdZNXTGVOJ+C205UVmOUiNk=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "TYC SPORTS",
-        "ico": "https://img.mundotv.fun/tycsports.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgUDUaw8FMKiitkVg6zEsW2QHRW38WOqoL+Zn45FjGvq4=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "TYC SPORTS OPC2",
-        "ico": "https://img.mundotv.fun/tycsports.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgalsKscD26weM/Nn8UFhi5oKP+omwQZDGHHCOeWIywZQ=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "FOX SPORTS ",
-        "ico": "https://img.mundotv.fun/pruebafox.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNggGElwF6idjaMmd/iUUPC3pteAYwmxmHQrg9oV8omZ7c=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "FOX SPORTS 2",
-        "ico": "https://img.mundotv.fun/foxsports2.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNgs2/IdLvR+cG6tjvClfr/ibEFgq+iw1X8Q7IpTcqHyzU=",
-        "drm_scheme": "",
-        "drm_license_url": ""
-      },
-      {
-        "name": "FOX SPORTS 3",
-        "ico": "https://img.mundotv.fun/foxsports3.png",
-        "uri": "wPasLvzHeuoTxMh/ba/Wfun+b8Ec2Nws7M9LYsh/NwXmzN0UMRaMKtxK1GAlKyNg8XVcQwQJNaruMgDEhlbZ+coX7n8xWtwgC909CDAjXsw=",
         "drm_scheme": "",
         "drm_license_url": ""
       }
