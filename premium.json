@@ -3,47 +3,44 @@
     "name": "LIST MULTI CANALES",
     "samples": [
       {
-        "name": "KIDOO",
+        "name": "KIDOO FLOW",
         "uri": "PieKW3Tj9RSHDO1/43uuAuJBqLU4R7uk3zC/JZT7ZPRm52oluBP2ktAUAxcrJKM8+B+GpLcojnHd9qJxds8iKtsyPurUVm0kZinerPzc1gw=",
         "icono": "https://panelssh.com.ar/Local/ext/Img/kidoo.png",
         "drm_scheme": "clearkey",
         "drm_license_uri": "8KTT32IP0mRywSaFlkAPREDeGmmAEE/GMXBq4eqvlee31S4IL7lI5RkygFs+kHV/mfAS3uR/jS6ObeO1FWp1wA==",
         "origin": "https://web.app.flow.com.ar",
         "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
-      },
-      {
-        "name": "TYC SPORTS",
-        "icono": "https://panelssh.com.ar/Local/ext/Img/tycsports.png",
-        "uri": "pl37HABcx8U0ISLD9vaWF1Hofbof8I/uXI0/o27wI75bXRwgxbz6xsYOpWPZvPUMXTuBwUJXVmqO5KDTFsme5WoniKjk33cMII1vDqLYo74=",
-        "drm_scheme": "clearkey",
-        "drm_license_url": "8KTT32IP0mRywSaFlkAPREDeGmmAEE/GMXBq4eqvlefWwTS1GCS6Cj0wMq5+Z4v0fk/PCd5IfR7l6TrcKgzcyQ==",
-        "referer": "https://nowtv.express.com.ar/"
-      },
-      {
-        "name": "ESPN PREMIUM",
-        "icono": "https://panelssh.com.ar/Local/ext/Img/espnpremium.png",
-        "uri": "NdXA7xykHv7BREP+oA4dUgIoykCQbqRrqP2m92qVeughH3O476mm5fCXpdnGShnX0LZ14fUvh3cPuV4SCwSlFQ==",
-        "drm_scheme": "clearkey",
-        "drm_license_url": "8KTT32IP0mRywSaFlkAPREDeGmmAEE/GMXBq4eqvlefykLa+weB5nb3tpug/ycsryPX16r4QOExCXgkQVZLbmEIeiBDRkGkXyoAC3M9z0qs=",
-        "referer": "https://player.sensa.com.ar/",
-        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
-      },
-      {
-        "name": "KRATEN EVENTOS",
-        "icono": "https://panelssh.com.ar/Local/ext/Img/kraten_eventos.png",
-        "uri": "T9yGAG7/LsOA8yxmdiyVcNfN9vYlv95IpRJGNCsc9aubHSoBzKsqTNMajRax+6Q00tuQCh6DaxrrMktvsxFZgjeAG//vY30Ka9bkPjL2MPU=",
-        "referer": "https://jeinzmacias.cm/",
-        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
-      },
-      {
-        "name": "EL OCHO TV TUCUMAN",
-        "icono": "https://panelssh.com.ar/Local/ext/Img/elochotv.png",
-        "uri": "rRYkruMGx1Lrbq0Qr6CSkZadnYSTTxWe8o9ZDNBY2CnoNAK8sXi58EqDPdv9mQwcX/a6gsvRL8Zcd+dKHHevaLsF0Mt3zfqEE/NcNQkzjo44l2RvvY+rjDS6DJ90v3kjMxCXeJ0r9bD35Kxg7Ru3wQ==",
-        "drm_scheme": "clearkey",
-        "drm_license_url": "8KTT32IP0mRywSaFlkAPREDeGmmAEE/GMXBq4eqvlec/hhKDXMT1k1fc22DQt0mZNOajH8DTm72BS/k9JkyKvA==",
-        "origin": "https://web.app.flow.com.ar",
-        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
-      }
+      }{
+    "name": "EL OCHO TV TUCUMAN FLOW",
+    "icono": "https://panelssh.com.ar/Local/ext/Img/elochotv.png",
+    "uri": "rRYkruMGx1Lrbq0Qr6CSkZadnYSTTxWe8o9ZDNBY2CnoNAK8sXi58EqDPdv9mQwcX/a6gsvRL8Zcd+dKHHevaLsF0Mt3zfqEE/NcNQkzjo44l2RvvY+rjDS6DJ90v3kjMxCXeJ0r9bD35Kxg7Ru3wQ==",
+    "drm_scheme": "clearkey",
+    "drm_license_url": "8KTT32IP0mRywSaFlkAPREDeGmmAEE/GMXBq4eqvlec/hhKDXMT1k1fc22DQt0mZNOajH8DTm72BS/k9JkyKvA==",
+    "origin": "https://web.app.flow.com.ar",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+  },
+  {
+    "name": "CANAL 7 NORTE TV SIN DRM",
+    "icono": "https://panelssh.com.ar/Local/ext/Img/canal7.png",
+    "uri": "tthE+e76wehWOQngOELz1y4HwaQJqs7fNm1/dpMce2iq8v82tmjpbapB5GjxMBc1"
+  },
+  {
+    "name": "ESPN PREMIUM SENSA",
+    "icono": "https://panelssh.com.ar/Local/ext/Img/espnpremium.png",
+    "uri": "NdXA7xykHv7BREP+oA4dUgIoykCQbqRrqP2m92qVeughH3O476mm5fCXpdnGShnX0LZ14fUvh3cPuV4SCwSlFQ==",
+    "drm_scheme": "clearkey",
+    "drm_license_url": "8KTT32IP0mRywSaFlkAPREDeGmmAEE/GMXBq4eqvlefykLa+weB5nb3tpug/ycsryPX16r4QOExCXgkQVZLbmEIeiBDRkGkXyoAC3M9z0qs=",
+    "referer": "https://player.sensa.com.ar/",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+  },
+  {
+    "name": "TYC SPORTS NOWTV",
+    "icono": "https://panelssh.com.ar/Local/ext/Img/tycsports.png",
+    "uri": "pl37HABcx8U0ISLD9vaWF1Hofbof8I/uXI0/o27wI75bXRwgxbz6xsYOpWPZvPUMXTuBwUJXVmqO5KDTFsme5WoniKjk33cMII1vDqLYo74=",
+    "drm_scheme": "clearkey",
+    "drm_license_url": "8KTT32IP0mRywSaFlkAPREDeGmmAEE/GMXBq4eqvlefWwTS1GCS6Cj0wMq5+Z4v0fk/PCd5IfR7l6TrcKgzcyQ==",
+    "referer": "https://nowtv.express.com.ar/"
+  }
     ]
   },
   {
