@@ -9,7 +9,6 @@
         "drm_scheme": "clearkey",
         "drm_license_uri": "8KTT32IP0mRywSaFlkAPREDeGmmAEE/GMXBq4eqvlee31S4IL7lI5RkygFs+kHV/mfAS3uR/jS6ObeO1FWp1wA==",
         "origin": "https://web.app.flow.com.ar",
-        "referer": "https://web.app.flow.com.ar/",
         "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
       },
       {
@@ -37,14 +36,14 @@
         "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
       },
       {
-    "name": "EL OCHO TV TUCUMAN",
-    "icono": "https://panelssh.com.ar/Local/ext/Img/elochotv.png",
-    "uri": "Uh7l7VXEpNpAA5j/lvkV2eYixv7GFkdKLLBvfCUyqE35JOjmSBefWy4FppjQp26IcMitUxxZY6Q4jyHdW7qAwfQe+musOY1S3ILN11wp6oysFVFBhqf8etUYouxcUaIHMzSLoKuvv1HxHW/yIEuhSQ==",
-    "drm_scheme": "clearkey",
-    "drm_license_url": "5dQ74icwLTJJPOQU93OWoxMmTwhlJtESAyxZ+np9V+cNDXpNAMhr7R5P0euOpRu5INwJWm1kHG01yZfMzbklFA==",
-    "origin": "https://web.app.flow.com.ar",
-    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
-  }
+        "name": "EL OCHO TV TUCUMAN",
+        "icono": "https://panelssh.com.ar/Local/ext/Img/elochotv.png",
+        "uri": "Uh7l7VXEpNpAA5j/lvkV2eYixv7GFkdKLLBvfCUyqE35JOjmSBefWy4FppjQp26IcMitUxxZY6Q4jyHdW7qAwfQe+musOY1S3ILN11wp6oysFVFBhqf8etUYouxcUaIHMzSLoKuvv1HxHW/yIEuhSQ==",
+        "drm_scheme": "clearkey",
+        "drm_license_url": "5dQ74icwLTJJPOQU93OWoxMmTwhlJtESAyxZ+np9V+cNDXpNAMhr7R5P0euOpRu5INwJWm1kHG01yZfMzbklFA==",
+        "origin": "https://web.app.flow.com.ar",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+      }
     ]
   },
   {
